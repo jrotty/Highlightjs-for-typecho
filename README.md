@@ -15,5 +15,7 @@
 > 如下面格式
 
 ```php
+/```php
 <?php echo 'hello jrotty!'; ?>
+/```
 ```
