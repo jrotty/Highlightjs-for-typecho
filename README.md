@@ -14,10 +14,6 @@
 
 > 如下面格式
 
-```
-
 ```php
 <?php echo 'hello jrotty!'; ?>
-```
-
 ```
