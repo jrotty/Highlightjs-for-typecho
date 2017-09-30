@@ -18,4 +18,6 @@
 \```php
 <?php echo 'hello jrotty!'; ?>
 \```
+
+删除上边代码中的\
 ```
