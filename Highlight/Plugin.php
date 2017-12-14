@@ -104,8 +104,12 @@ class Highlight_Plugin implements Typecho_Plugin_Interface
         $jsUrl = Helper::options()->pluginUrl . '/Highlight/res/highlight.js?version=9.12.0';
         echo '<script type="text/javascript" src="'. $jsUrl .'"></script>';
         echo '<script type="text/javascript">$("pre code").each(function(i, block) {hljs.highlightBlock(block);});';
-      if(Typecho_Widget::widget('Widget_Options')->Plugin('Highlight')->lines=='0'){	echo '$(function(){$("pre code").each(function(){$(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ul>");});
-});';}
+      if(Typecho_Widget::widget('Widget_Options')->Plugin('Highlight')->lines=='0'){	echo 'var l = $("pre code").find("ul").length;
+if(l<=0){
+    $("pre code").each(function(){
+        $(this).html("<ul><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ul>");
+    });
+  }';}
         echo '</script>';
     }
     
