@@ -1,0 +1,17 @@
+pre code ul {
+	list-style: decimal;
+	margin: 0px 0px 0 40px !important;
+	padding: 0px;
+}
+pre code ul li {
+	list-style: decimal-leading-zero;
+	border-left: 1.5px solid #03ea27 !important;
+	padding: 5px!important;
+	margin: 0 !important;
+	line-height: 14px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+pre code ul li:nth-of-type(even) {
+	color: inherit;
+}
